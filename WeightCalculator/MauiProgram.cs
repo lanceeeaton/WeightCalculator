@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using MudBlazor.Services;
 namespace WeightCalculator
 {
     public static class MauiProgram
@@ -15,9 +15,10 @@ namespace WeightCalculator
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddMudServices();
 
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
 
